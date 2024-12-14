@@ -927,6 +927,73 @@
           ></a>
         </div>
       </div>
+      <div
+        class="contact_form bg-white max-w-xl p-10 mx-auto rounded-3xl mt-20"
+      >
+        <h3 class="text-4xl mb-10">Contact us today.</h3>
+        <!-- action="my-cases/LoginForm/" -->
+        <form id="contact_form" method="post">
+          <!-- enctype="application/x-www-form-urlencoded" -->
+          <div class="fieldset space-y-5 mb-10">
+            <div id="name_Holder" class="space-y-1 name">
+              <label for="name">Name</label>
+              <div class="middleColumn">
+                <input
+                  type="text"
+                  name="name"
+                  class="block w-full px-3 py-1.5 text-xl leading-normal text-gray-700 bg-white border border-gray-300 rounded-none transition-colors ease-in-out duration-150 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  id="name"
+                  placeholder="Please type your name."
+                  required
+                />
+              </div>
+            </div>
+            <div id="email_Holder" class="space-y-1">
+              <label for="email">Email</label>
+              <div class="middleColumn">
+                <input
+                  type="email"
+                  name="email"
+                  class="block w-full px-3 py-1.5 text-xl leading-normal text-gray-700 bg-white border border-gray-300 rounded-none transition-colors ease-in-out duration-150 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  id="email"
+                  autofocus="true"
+                  placeholder="Please enter your email."
+                  autocomplete="email"
+                  required
+                />
+              </div>
+            </div>
+
+            <div id="message_Holder" class="space-y-1">
+              <label for="message">Message</label>
+              <div class="middleColumn">
+                <textarea
+                  type="text"
+                  name="message"
+                  class="block w-full px-3 py-1.5 text-xl leading-normal text-gray-700 bg-white border border-gray-300 rounded-none transition-colors ease-in-out duration-150 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  id="message"
+                  autofocus="true"
+                  placeholder="Please enter your message."
+                  required
+                  rows="5"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn-toolbar">
+            <button
+              type="submit"
+              name="action_doLoginSubmit"
+              value="Log In"
+              class="action btn btn-secondary bg-primary disabled:bg-primary/50 w-full py-1.5 text-xl leading-normal text-white transition-colors ease-in-out duration-150 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 rounded-lg"
+              id="Form_LoginForm_action_doLoginSubmit"
+            >
+              <span>Submit</span>
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
 
     <!-- footer -->

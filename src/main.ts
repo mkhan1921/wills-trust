@@ -1,24 +1,57 @@
-import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
+import "./style.css";
+const contactForm = document.getElementById("contact_form");
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
-  </div>
-`
+contactForm?.addEventListener("submit", submit);
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+function submit(e) {
+  e.preventDefault();
+  const form = e.target;
+  const formData = new FormData(form);
+
+  // Extract values
+  const name = formData.get("name")?.trim() || "";
+  const email = formData.get("email")?.trim() || "";
+  const message = formData.get("message")?.trim() || "";
+
+  // Validate fields
+  if (!name || !email || !message) {
+    return alert("All Fields are required.");
+  }
+
+  // Disable the submit button
+  const submitButton = form.querySelector("button[type='submit']");
+  submitButton.disabled = true;
+  submitButton.textContent = "Submitting...";
+
+  fetch("https://formsubmit.co/ajax/mahmoodkns@hotmail.com", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify({
+      name: name,
+      email: email,
+      message: message,
+    }),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.success === "false") {
+        throw new Error("An error has occurred.");
+      } else {
+        console.log(data);
+        alert("Form submitted successfully!");
+        form.reset(); // Reset the form after successful submission
+      }
+    })
+    .catch((error) => {
+      console.error(error);
+      alert(error.message || "An unexpected error occurred.");
+    })
+    .finally(() => {
+      // Re-enable the submit button
+      submitButton.disabled = false;
+      submitButton.textContent = "Submit";
+    });
+}
