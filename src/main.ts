@@ -37,7 +37,7 @@ function submit(e: SubmitEvent) {
   submitButton.disabled = true;
   submitButton.textContent = "Submitting...";
 
-  fetch("https://formsubmit.co/ajax/mahmoodkns@hotmail.com", {
+  fetch("https://formsubmit.co/ajax/muhammadkhan1921@gmail.com", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
