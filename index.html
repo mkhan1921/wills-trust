@@ -88,7 +88,7 @@
               class="lg:max-w-lg flex flex-col text-center lg:text-left lg:self-center font-spirit"
             >
               <h1
-                class="font-spirit leading-20 xl:leading-[5.198rem] text-4xl sm:text-6xl xl:text-7xl font-bold"
+                class="font-spirit leading-20 xl:leading-[5.198rem] text-5xl sm:text-6xl xl:text-7xl font-bold"
                 aria-level="4"
               >
                 Protect What Matters Most. Plan Your Legacy Today.
@@ -190,12 +190,17 @@
           class="grid gap-y-7 grid-cols-1 lg:gap-x-5 lg:gap-y-16 max-w-screen-xxl mx-auto lg:mt-[72px] mt-4 order-1 lg:order-2 lg:grid-cols-1 xl:px-[110px]"
         >
           <div>
-            <div class="h-full">
+            <div class="h-full relative overflow-hidden">
               <img
-                src="https://trustwill-507902781.imgix.net/homepage/meet-the-kramms-family.png?auto=compress,format&amp;cs=srgb"
+                src="/images/signing.png"
                 alt="Family gathered around a table looking at their Estate Plan from Wills &amp; Trust"
                 class="rounded-2xl m-auto max-h-undefined lazyLoad isLoading"
               />
+              <div
+                class="absolute h-1/2 top-1/2 left-0 inset-0 bg-gradient-to-t from-black/70 to-transparent text-center py-20 text-white"
+              >
+                <span class="text-5xl font-serif">Meet the Steyn</span>
+              </div>
             </div>
           </div>
         </div>
@@ -717,7 +722,7 @@
             data-testid="itemAuthor"
             class="font-semibold xl:text-lg text-base xl: mt-3"
           >
-          Fatima
+            Fatima
           </p>
           <p data-testid="itemSince" class="xl:text-lg text-base">
             Member since 2020
@@ -977,7 +982,7 @@
         </div>
       </div>
       <div
-        class="contact_form border  max-w-xl p-10 mx-auto rounded-3xl mt-20 scroll-p-16"
+        class="contact_form border max-w-xl p-10 mx-auto rounded-3xl mt-20 scroll-p-16"
         id="contact"
       >
         <h3 class="text-4xl mb-10">Contact us today.</h3>
@@ -1020,7 +1025,7 @@
                   name="cellphone_no"
                   class="block px-3 py-1.5 leading-normal text-gray-700 border border-gray-300 rounded-none transition-colors ease-in-out duration-150 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder:text-base w-full"
                   id="cellphone_no"
-                  placeholder="+27 to 083..."
+                  placeholder="083..."
                   required
                 />
               </div>
@@ -1032,9 +1037,7 @@
                     name="email"
                     class="block px-3 py-1.5 leading-normal text-gray-700 bg-white border border-gray-300 rounded-none transition-colors ease-in-out duration-150 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder:text-base w-full"
                     id="email"
-                    autofocus="true"
                     placeholder="Please enter your email."
-                    autocomplete="email"
                     required
                   />
                 </div>
@@ -1078,7 +1081,6 @@
                   name="message"
                   class="block w-full px-3 py-1.5 leading-normal text-gray-700 bg-white border border-gray-300 rounded-none transition-colors ease-in-out duration-150 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   id="message"
-                  autofocus="true"
                   placeholder="Please enter your message."
                   required
                   rows="5"
