@@ -14,6 +14,19 @@ export default {
       fontFamily: {
         spirit: ["New Spirit", "sans-serif"],
       },
+      keyframes: {
+        fadeIn: {
+          "0%": { bottom: "0", opacity: "0" },
+          "100%": { bottom: "30px", opacity: "1" },
+        },
+        fadeOut: {
+          "0%": { bottom: "30px", opacity: "1" },
+          "100%": { bottom: "0", opacity: "0" },
+        },
+      },
+    },
+    animation: {
+      "fade-in-out": "fadeIn 0.5s ease-out, fadeOut 0.5s ease-in 2.5s",
     },
   },
   plugins: [],

@@ -46,6 +46,21 @@
         </div>
       </div>
     </nav>
+    <!-- toast -->
+    <div
+      id="snackbar"
+      class="hidden fixed left-1/2 sm:left-40 bottom-8 -translate-x-1/2 text-white text-center rounded-md px-4 py-2 z-10 min-w-[250px] animate-fade-in-out"
+    >
+      Data sent Successfully.
+    </div>
+    <button
+      id="scrollToTop"
+      class="hidden fixed bottom-5 right-5 bg-primary text-white rounded-full shadow-lg text-3xl font-bold hover:bg-primary-dark focus:outline-none focus:ring-0 aspect-square w-12 items-center justify-center transition"
+      onclick="scrollToTop()"
+    >
+      ↑
+    </button>
+
     <section class="my-20">
       <div class="container-wrapper">
         <div
@@ -59,10 +74,10 @@
               class="lg:max-w-lg flex flex-col text-center lg:text-left lg:self-center font-spirit"
             >
               <h1
-                class="text-7xl font-spirit leading-20 xl:leading-[5.198rem] text-6xl xl:text-h1 font-bold"
+                class="font-spirit leading-20 xl:leading-[5.198rem] text-4xl sm:text-6xl xl:text-7xl font-bold"
                 aria-level="4"
               >
-                Ensure your legacy lives on. Draft your will today.
+                Protect What Matters Most. Plan Your Legacy Today.
               </h1>
               <p
                 class="mt-3 xl:mt-6 lg:max-w-md text-base lg:text-lg xl:gap-60px font-sans"
@@ -74,18 +89,21 @@
               </p>
               <div class="mt-8 lg:mt-10 grid xl:block gap-3">
                 <a
-                  href="https://app.trustandwill.com/signup?productType=trust"
+                  href="#contact"
                   class="button rounded-3xl bg-primary hover:bg-primary/80 duration-200 px-5 w-full lg:mr-3 xl:mt-3 xl:inline-block xl:w-auto text-center text-white py-2 font-sans font-semibold"
                 >
                   Create Your Trust
                 </a>
                 <a
-                  href="https://app.trustandwill.com/signup?productType=will"
+                  href="#contact"
                   class="button rounded-3xl bg-primary hover:bg-primary/80 duration-200 px-5 w-full mt-3 xl:mt-3 xl:inline-block xl:w-auto text-center text-white py-2 font-sans font-semibold"
                 >
                   Create Your Will
                 </a>
               </div>
+              <span class="text-xs font-sans mt-5 block md:hidden"
+                >Protect What Matters Most. Plan Your Legacy Today.</span
+              >
             </div>
             <div class="hidden lg:block">
               <div
@@ -95,7 +113,7 @@
                   <div class="h-full">
                     <img
                       src="https://trustwill-507902781.imgix.net/homepage/kramms-family-estate.png?auto=compress,format&amp;cs=srgb"
-                      alt="Smiling family holding their Trust &amp; Will Estate Plan"
+                      alt="Smiling family holding their Wills &amp; Trust Estate Plan"
                       class="rounded-2xl m-auto max-h-lg lazyLoad isLoaded"
                     />
                   </div>
@@ -127,11 +145,14 @@
             </h2>
             <div class="lg:order-3 order-1">
               <a
-                href="https://app.trustandwill.com/signup?productType=trust"
+                href="#contact"
                 class="button rounded-3xl bg-primary hover:bg-primary/80 duration-200 px-5 w-full lg:mr-3 xl:mt-3 block xl:inline-block xl:w-auto text-center text-white py-2.5 font-sans font-semibold text-xl"
               >
                 Find the Plan for You
               </a>
+              <span class="text-xs text-center font-sans mt-5 block md:hidden"
+                >Protect What Matters Most. Plan Your Legacy Today.</span
+              >
             </div>
           </div>
           <div class="flex flex-col lg:order-2 order-1 xl:pl-12">
@@ -158,7 +179,7 @@
             <div class="h-full">
               <img
                 src="https://trustwill-507902781.imgix.net/homepage/meet-the-kramms-family.png?auto=compress,format&amp;cs=srgb"
-                alt="Family gathered around a table looking at their Estate Plan from Trust &amp; Will"
+                alt="Family gathered around a table looking at their Estate Plan from Wills &amp; Trust"
                 class="rounded-2xl m-auto max-h-undefined lazyLoad isLoading"
               />
             </div>
@@ -215,7 +236,7 @@
             >
               <div data-testid="linkButton">
                 <a
-                  href="/trust/"
+                  href="#contact"
                   target="_blank"
                   aria-describedby="audioeye_new_window_message"
                   ><span
@@ -229,44 +250,48 @@
                 ></a>
               </div>
             </div>
-            <div
-              class="mb-[44px] mt-[44px] lg:mt-[57px] lg:mb-12 order-1 lg:order-2"
-            >
+            <div class="mb-[44px] mt-[44px] lg:mt-[57px] lg:mb-12">
+              <p
+                class="border-b-2 border-solid xl:text-2xl xl:leading-17 text-base leading-15 xl:p-2 text-white border-black"
+              >
+                Prevent lengthy and costly probate processes
+              </p>
+              <p
+                class="border-b-2 border-solid xl:text-2xl xl:leading-17 text-base leading-15 xl:p-2 text-white border-black"
+              >
+                Protect your assets and provide for your loved ones
+              </p>
               <p
                 class="border-b-2 border-solid xl:text-2xl xl:leading-17 text-base leading-15 xl:p-2 text-white border-black"
               >
                 Popular choice for homeowners
               </p>
-              <p
-                class="border-b-2 border-solid xl:text-2xl xl:leading-17 text-base leading-15 xl:p-2 text-white border-black"
-              >
-                Contains all Will documents
-              </p>
-              <p
-                class="border-b-2 border-solid xl:text-2xl xl:leading-17 text-base leading-15 xl:p-2 text-white border-black"
-              >
-                Goes into effect while you're living
-              </p>
             </div>
             <div
-              class="xl:max-w-button-lg-max w-full order-2 lg:order-3 self-center xl:self-auto"
+              class="w-full text-center mx-auto md:w-1/2 bg-[#b6d7ec] rounded-3xl px-5 py-3"
             >
               <a
                 data-testid="body_auth"
                 data-attr="auth_button"
-                href="https://app.trustandwill.com/signup?productType=trust"
+                href="#contact"
                 class="button inline-block w-full xl:max-w-button-lg-max secondary-rounded"
               >
                 Create Your Trust
               </a>
             </div>
+            <span
+              class="text-xs font-sans mt-5 block md:hidden text-center text-gray-300"
+              >Protect What Matters Most. Plan Your Legacy Today.</span
+            >
           </div>
         </div>
         <div>
           <div
             class="rounded-2xl h-full flex flex-col justify-between bg-[#4a6866] px-6 lg:px-8 xl:px-10 pt-6 lg:pt-8 xl:pt-[40px] pb-[40px] lg:pb-12"
           >
-            <h3 class="leading-17 xl:leading-20 pb-4 text-4xl text-white">
+            <h3
+              class="leading-17 xl:leading-20 pb-4 text-4xl text-white font-spirit"
+            >
               Write a Will.
             </h3>
             <p class="leading-16 text-base xl:text-lg text-white">
@@ -278,7 +303,7 @@
             >
               <div data-testid="linkButton">
                 <a
-                  href="/will/"
+                  href="#contact"
                   target="_blank"
                   aria-describedby="audioeye_new_window_message"
                   ><span
@@ -292,37 +317,39 @@
                 ></a>
               </div>
             </div>
-            <div
-              class="mb-[44px] mt-[44px] lg:mt-[57px] lg:mb-12 order-1 lg:order-2"
-            >
+            <div class="mb-[44px] mt-[44px] lg:mt-[57px] lg:mb-12">
               <p
-                class="border-b-2 border-solid text-base xl:text-2xl xl:leading-17 text-base leading-15 xl:p-2 text-white border-black"
+                class="border-b-2 border-solid text-base xl:text-2xl xl:leading-17 leading-15 xl:p-2 text-white border-black"
               >
-                Does not prevent probate court
+                Clearly outline asset distribution
               </p>
               <p
-                class="border-b-2 border-solid text-base xl:text-2xl xl:leading-17 text-base leading-15 xl:p-2 text-white border-black"
+                class="border-b-2 border-solid text-base xl:text-2xl xl:leading-17 leading-15 xl:p-2 text-white border-black"
               >
-                Most affordable estate plan
+                Specify guardianship for minor children
               </p>
               <p
-                class="border-b-2 border-solid text-base xl:text-2xl xl:leading-17 text-base leading-15 xl:p-2 text-white border-black"
+                class="border-b-2 border-solid text-base xl:text-2xl xl:leading-17 leading-15 xl:p-2 text-white border-black"
               >
-                Goes into effect after you're gone
+                Minimize potential family conflicts
               </p>
             </div>
             <div
-              class="xl:max-w-button-lg-max w-full order-2 lg:order-3 self-center xl:self-auto"
+              class="w-full text-center mx-auto md:w-1/2 bg-[#b6d7ec] rounded-3xl px-5 py-3"
             >
               <a
                 data-testid="body_auth"
                 data-attr="auth_button"
-                href="https://app.trustandwill.com/signup?productType=will"
+                href="#contact"
                 class="button inline-block w-full xl:max-w-button-lg-max secondary-rounded"
               >
                 Create Your Will
               </a>
             </div>
+            <span
+              class="text-xs font-sans mt-5 block md:hidden text-center text-gray-300"
+              >Protect What Matters Most. Plan Your Legacy Today.</span
+            >
           </div>
         </div>
       </div>
@@ -376,7 +403,7 @@
             >
               <div data-testid="linkButton">
                 <a
-                  href="//"
+                  href="#contact"
                   target="_blank"
                   aria-describedby="audioeye_new_window_message"
                   ><span
@@ -396,28 +423,31 @@
               <p
                 class="border-b-2 border-solid xl:text-2xl xl:leading-17 text-base leading-15 xl:p-2 text-black-darken-25 border-black"
               >
-                State-specific requirements
+                Dedicated case managers
               </p>
               <p
                 class="border-b-2 border-solid xl:text-2xl xl:leading-17 text-base leading-15 xl:p-2 text-black-darken-25 border-black"
               >
-                Document prep and review
+                Document preparation and review
               </p>
               <p
                 class="border-b-2 border-solid xl:text-2xl xl:leading-17 text-base leading-15 xl:p-2 text-black-darken-25 border-black"
               >
-                Optional legal representation
+                Legal navigation included in the plan
               </p>
             </div>
             <div
               class="xl:max-w-button-lg-max w-full order-2 lg:order-3 self-center xl:self-auto"
             >
               <a
-                href="https://app.trustandwill.com/signup?productType=will"
+                href="#contact"
                 class="button rounded-3xl bg-primary hover:bg-primary/80 duration-200 px-5 mt-3 xl:mt-3 xl:inline-block xl:w-auto text-center text-white py-2 font-sans font-semibold w-full block"
               >
                 Book a Free Probate Call
               </a>
+              <span class="text-xs font-sans mt-3 block md:hidden text-center"
+                >Protect What Matters Most. Plan Your Legacy Today.</span
+              >
             </div>
           </div>
         </div>
@@ -480,11 +510,14 @@
           </div> -->
           <div class="lg:order-3 order-1">
             <a
-              href="https://app.trustandwill.com/signup?productType=will"
-              class="button rounded-3xl bg-primary hover:bg-primary/80 duration-200 px-5 w-full mt-3 xl:mt-3 xl:inline-block xl:w-auto text-center text-white py-2 font-sans font-semibold"
+              href="#contact"
+              class="button rounded-3xl bg-primary hover:bg-primary/80 duration-200 px-5 block w-full mt-3 xl:mt-3 xl:inline-block xl:w-auto text-center text-white py-2 font-sans font-semibold"
             >
               Learn More About Probate
             </a>
+            <span class="text-xs font-sans mt-3 block md:hidden text-center"
+              >Protect What Matters Most. Plan Your Legacy Today.</span
+            >
           </div>
         </div>
         <div class="flex flex-col lg:order-2 order-1 xl:pl-[40px]">
@@ -499,7 +532,7 @@
             "I felt completely supported throughout the process. I received all
             of the documents I needed... When I had questions, I received an
             answer within 24 hours. The one time I was thoroughly confused by
-            what the court wanted, Trust &amp; Will scheduled a phone call to
+            what the court wanted, Wills &amp; Trust scheduled a phone call to
             help me unravel it."
           </p>
           <p class="xl:font-normal text-lg leading-16">
@@ -561,9 +594,9 @@
           </h4>
           <p class="text-base lg:text-lg">
             Get a protection plan for estate fees, along with additional cover
-            options like liquidity, EduCare™ to provide financial security for
-            families. Flexible plans and extenders ensure comprehensive coverage
-            for various needs.
+            options like liquidity to provide financial security for families.
+            Flexible plans and extenders ensure comprehensive coverage for
+            various needs.
           </p>
         </div>
         <div
@@ -627,11 +660,11 @@
       <div
         class="grid gap-y-7 grid-cols-1 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-16 max-w-screen-xxl mx-auto"
       >
-        <div data-testid="gridItem">
+        <div>
           <img
-            src="https://trustwill-507902781.imgix.net/homepage/generational-recipe-legacy.jpg?auto=compress,format&amp;cs=srgb"
+            src="/images/testimonial-3.jpg"
             alt="Two generations cook, passing down recipe, symbolizing legacy transfer akin to estate planning princ…"
-            class="rounded-2xl lg:w-full w-auto xl:max-h-sm lg:max-h-xs md:max-h-md mb-5 m-auto lazyLoad isLoading"
+            class="rounded-2xl lg:w-full xl:max-h-sm lg:max-h-xs md:max-h-md mb-5 m-auto lazyLoad isLoading flex-1 w:3/4 sm:w-1/2 lg:w-auto"
             aria-describedby="ae_longdesc-img-1734153827452"
           /><span
             id="ae_longdesc-img-1734153827452"
@@ -653,11 +686,11 @@
             Member since 2020
           </p>
         </div>
-        <div data-testid="gridItem">
+        <div>
           <img
-            src="https://trustwill-507902781.imgix.net/homepage/legacy-planning-together.jpg?auto=compress,format&amp;cs=srgb"
+            src="/images/testimonial-2.webp"
             alt="Couple in kitchen with fresh produce, symbolizing nurturing prep for legacy planning, including will…"
-            class="rounded-2xl lg:w-full w-auto xl:max-h-sm lg:max-h-xs md:max-h-md mb-5 m-auto lazyLoad isLoading"
+            class="rounded-2xl lg:w-full xl:max-h-sm lg:max-h-xs md:max-h-md mb-5 m-auto lazyLoad isLoading flex-1 w:3/4 sm:w-1/2 lg:w-auto"
             aria-describedby="ae_longdesc-img-1734153827229"
           /><span
             id="ae_longdesc-img-1734153827229"
@@ -666,7 +699,7 @@
             >s and trusts.</span
           >
           <p data-testid="itemText" class="font-semibold xl:text-2xl text-xl">
-            "I chose Trust &amp; Will because of their easy-to-use website and
+            "I chose Wills &amp; Trust because of their easy-to-use website and
             great customer service."
           </p>
           <p
@@ -679,11 +712,11 @@
             Member since 2020
           </p>
         </div>
-        <div data-testid="gridItem">
+        <div>
           <img
-            src="https://trustwill-507902781.imgix.net/homepage/family-trust-guardianship.jpg?auto=compress,format&amp;cs=srgb"
+            src="/images/testimonial-1.jpg"
             alt="Mother and child laughing together with a sense of security, representing the peace of mind that com…"
-            class="rounded-2xl lg:w-full w-auto xl:max-h-sm lg:max-h-xs md:max-h-md mb-5 m-auto lazyLoad isLoading"
+            class="rounded-2xl lg:w-full xl:max-h-sm lg:max-h-xs md:max-h-md mb-5 m-auto lazyLoad isLoading flex-1 w:3/4 sm:w-1/2 lg:w-auto"
             aria-describedby="ae_longdesc-img-1734153827148"
           /><span
             id="ae_longdesc-img-1734153827148"
@@ -741,25 +774,29 @@
       </div> -->
 
       <div
-        class="lg:mb-12 lg:mt-12 mb-8 mt-8 flex flex-col lg:block text-center gap-3"
+        class="lg:mb-12 lg:mt-12 mb-3 mt-8 flex flex-col lg:block text-center gap-3"
       >
         <a
-          href="https://app.trustandwill.com/signup?productType=trust"
+          href="#contact"
           class="button rounded-3xl bg-primary hover:bg-primary/80 duration-200 px-5 w-full lg:mr-3 xl:mt-3 xl:inline-block xl:w-auto text-center text-white py-2 font-sans font-semibold"
         >
           Create Your Trust
         </a>
         <a
-          href="https://app.trustandwill.com/signup?productType=trust"
+          href="#contact"
           class="button rounded-3xl bg-primary hover:bg-primary/80 duration-200 px-5 w-full lg:mr-3 xl:mt-3 xl:inline-block xl:w-auto text-center text-white py-2 font-sans font-semibold"
         >
           Create Your Will
         </a>
       </div>
+
+      <span class="text-xs font-sans mb-8 block md:hidden text-center"
+        >Protect What Matters Most. Plan Your Legacy Today.</span
+      >
       <div class="text-center">
         <div data-testid="linkButton">
           <a
-            href="/"
+            href="#contact"
             target="_blank"
             aria-describedby="audioeye_new_window_message"
             ><span
@@ -892,28 +929,29 @@
           </p>
         </div>
       </div>
-      <div>
-        <div
-          class="lg:mb-12 lg:mt-12 mb-8 mt-8 flex flex-col lg:block text-center gap-3"
-        >
+      <div class="lg:mb-12 lg:mt-12 my-8">
+        <div class="flex flex-col mb-3 lg:block text-center gap-3">
           <a
-            href="https://app.trustandwill.com/signup?productType=trust"
+            href="#contact"
             class="button rounded-3xl bg-primary hover:bg-primary/80 duration-200 px-5 w-full lg:mr-3 xl:mt-3 xl:inline-block xl:w-auto text-center text-white py-2 font-sans font-semibold"
           >
             Create Your Trust
           </a>
           <a
-            href="https://app.trustandwill.com/signup?productType=trust"
+            href="#contact"
             class="button rounded-3xl bg-primary hover:bg-primary/80 duration-200 px-5 w-full lg:mr-3 xl:mt-3 xl:inline-block xl:w-auto text-center text-white py-2 font-sans font-semibold"
           >
             Create Your Will
           </a>
         </div>
+        <span class="text-xs font-sans block md:hidden text-center"
+          >Protect What Matters Most. Plan Your Legacy Today.</span
+        >
       </div>
       <div class="text-center">
         <div data-testid="linkButton" class="font-semibold">
           <a
-            href="/"
+            href="#contact"
             target="_blank"
             aria-describedby="audioeye_new_window_message"
             ><span
@@ -928,49 +966,106 @@
         </div>
       </div>
       <div
-        class="contact_form bg-white max-w-xl p-10 mx-auto rounded-3xl mt-20"
+        class="contact_form bg-white max-w-xl p-10 mx-auto rounded-3xl mt-20 scroll-p-16"
+        id="contact"
       >
         <h3 class="text-4xl mb-10">Contact us today.</h3>
         <!-- action="my-cases/LoginForm/" -->
         <form id="contact_form" method="post">
           <!-- enctype="application/x-www-form-urlencoded" -->
           <div class="fieldset space-y-5 mb-10">
-            <div id="name_Holder" class="space-y-1 name">
-              <label for="name">Name</label>
-              <div class="middleColumn">
+            <div class="flex flex-col md:flex-row gap-5 md:gap-2">
+              <div id="firstname_Holder" class="space-y-1 firstname w-full">
+                <label for="firstname">First Name</label>
                 <input
                   type="text"
-                  name="name"
-                  class="block w-full px-3 py-1.5 text-xl leading-normal text-gray-700 bg-white border border-gray-300 rounded-none transition-colors ease-in-out duration-150 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                  id="name"
-                  placeholder="Please type your name."
+                  name="firstname"
+                  class="block w-full px-3 py-1.5 leading-normal text-gray-700 bg-white border border-gray-300 rounded-none transition-colors ease-in-out duration-150 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder:text-base"
+                  id="firstname"
+                  placeholder="John"
                   required
                 />
               </div>
-            </div>
-            <div id="email_Holder" class="space-y-1">
-              <label for="email">Email</label>
-              <div class="middleColumn">
+              <div id="lastname_Holder" class="space-y-1 lastname w-full">
+                <label for="lastname">Last Name</label>
                 <input
-                  type="email"
-                  name="email"
-                  class="block w-full px-3 py-1.5 text-xl leading-normal text-gray-700 bg-white border border-gray-300 rounded-none transition-colors ease-in-out duration-150 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                  id="email"
-                  autofocus="true"
-                  placeholder="Please enter your email."
-                  autocomplete="email"
+                  type="text"
+                  name="lastname"
+                  class="block w-full px-3 py-1.5 leading-normal text-gray-700 bg-white border border-gray-300 rounded-none transition-colors ease-in-out duration-150 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder:text-base"
+                  id="lastname"
+                  placeholder="Doe"
                   required
                 />
               </div>
             </div>
-
-            <div id="message_Holder" class="space-y-1">
+            <div class="flex flex-col md:flex-row gap-5 md:gap-2">
+              <div
+                id="cellphone_no_Holder"
+                class="space-y-1 cellphone_no w-full"
+              >
+                <label for="cellphone_no">Cellphone no</label>
+                <input
+                  type="text"
+                  name="cellphone_no"
+                  class="block px-3 py-1.5 leading-normal text-gray-700 bg-white border border-gray-300 rounded-none transition-colors ease-in-out duration-150 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder:text-base w-full"
+                  id="cellphone_no"
+                  placeholder="+2782********"
+                  required
+                />
+              </div>
+              <div id="email_Holder" class="space-y-1 w-full">
+                <label for="email">Email</label>
+                <div class="middleColumn">
+                  <input
+                    type="email"
+                    name="email"
+                    class="block px-3 py-1.5 leading-normal text-gray-700 bg-white border border-gray-300 rounded-none transition-colors ease-in-out duration-150 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder:text-base w-full"
+                    id="email"
+                    autofocus="true"
+                    placeholder="Please enter your email."
+                    autocomplete="email"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col md:flex-row gap-5 md:gap-2">
+              <div id="language_Holder" class="space-y-1 language w-full">
+                <label for="language">Language</label>
+                <select
+                  type="text"
+                  name="language"
+                  class="block w-full px-3 py-1.5 leading-normal text-gray-700 bg-white border border-gray-300 rounded-none transition-colors ease-in-out duration-150 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  id="language"
+                  required
+                >
+                  <option value="" disabled selected>Please select</option>
+                  <option value="English">English</option>
+                  <option value="Afrikaans">Afrikaans</option>
+                </select>
+              </div>
+              <div id="shariah_Holder" class="space-y-1 shariah w-full">
+                <label for="shariah">Shariah compliant</label>
+                <select
+                  type="text"
+                  name="shariah"
+                  class="block w-full px-3 py-1.5 leading-normal text-gray-700 bg-white border border-gray-300 rounded-none transition-colors ease-in-out duration-150 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  id="shariah"
+                  required
+                >
+                  <option value="" disabled selected>Please select</option>
+                  <option value="yes">Yes</option>
+                  <option value="no">No</option>
+                </select>
+              </div>
+            </div>
+            <!-- <div id="message_Holder" class="space-y-1">
               <label for="message">Message</label>
               <div class="middleColumn">
                 <textarea
                   type="text"
                   name="message"
-                  class="block w-full px-3 py-1.5 text-xl leading-normal text-gray-700 bg-white border border-gray-300 rounded-none transition-colors ease-in-out duration-150 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  class="block w-full px-3 py-1.5 leading-normal text-gray-700 bg-white border border-gray-300 rounded-none transition-colors ease-in-out duration-150 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   id="message"
                   autofocus="true"
                   placeholder="Please enter your message."
@@ -978,7 +1073,7 @@
                   rows="5"
                 ></textarea>
               </div>
-            </div>
+            </div> -->
           </div>
 
           <div class="btn-toolbar">
@@ -986,8 +1081,7 @@
               type="submit"
               name="action_doLoginSubmit"
               value="Log In"
-              class="action btn btn-secondary bg-primary disabled:bg-primary/50 w-full py-1.5 text-xl leading-normal text-white transition-colors ease-in-out duration-150 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 rounded-lg"
-              id="Form_LoginForm_action_doLoginSubmit"
+              class="action btn btn-secondary bg-primary disabled:bg-primary/50 w-full py-1.5 leading-normal text-white transition-colors ease-in-out duration-150 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 rounded-lg"
             >
               <span>Submit</span>
             </button>
@@ -1003,29 +1097,29 @@
       style="opacity: 1"
     >
       <div class="w-3/4 m-auto">
-        <div class="flex items-center py-4 justify-center">
+        <div class="flex items-center justify-center relative my-5">
           <img
-            src="https://trustwill-507902781.imgix.net/homepage/footer-image-web.png?auto=compress,format&amp;cs=srgb"
+            src="/images/plains.jpg"
             alt="Footer image depicting a meadow with overlaying 'Take good care' heading"
-            class="my-5 hidden lg:block lazyLoad isLoading"
+            class="hidden lg:block lazyLoad isLoading"
           />
-          <img
-            src="https://trustwill-507902781.imgix.net/homepage/footer-image.png?auto=compress,format&amp;cs=srgb"
-            alt="Footer image depicting a meadow with overlaying 'Take good care' heading"
-            class="my-5 lg:hidden block lazyLoad"
-          />
+          <div
+            class="overlay h-full w-full bg-black/30 absolute left-0 top-0 text-center pt-20 font-serif text-6xl font-bold"
+          >
+            Take care
+          </div>
         </div>
         <div class="w-full border-t border-dark-lighten-62">
           <section class="mt-10 flex justify-between">
             <a href="/">
               <img
                 src="https://d15repwykl7r2z.cloudfront.net/website/images/logos/trustwillstacked.svg"
-                alt="Footer logo of Trust and Will"
+                alt="Footer logo of Free Will"
                 class="rounded-none lazyLoad isLoading"
               />
             </a>
             <a
-              href="/choose-your-product"
+              href="#contact"
               title="Get Started Today"
               class="bg-periwinkle-lighten-20 text-dark-default py-2 px-6 flex items-center justify-center rounded-4xl min-w-getStartedButton text-lg font-semibold"
               >Get Started</a
