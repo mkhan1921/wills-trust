@@ -2,9 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+
 * {
   scroll-behavior: smooth;
   scroll-padding-top: 4rem
+}
+
+.f {
+  font-family:Georgia, 'Times New Roman', Times, serif
 }
 
 .container-wrapper {

@@ -13,6 +13,7 @@ export default {
       },
       fontFamily: {
         spirit: ["New Spirit", "sans-serif"],
+        georgia: ["Georgia", 'Times New Roman', "Times", "serif"]
       },
       keyframes: {
         fadeIn: {
