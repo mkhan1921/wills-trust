@@ -59,7 +59,7 @@ function submit(e: SubmitEvent) {
       } else {
         console.log(data);
         // alert("Form submitted successfully!");
-        showSnackbar("Form submitted successfully!");
+        showSnackbar("Form submitted successfully!", "success");
         form.reset(); // Reset the form after successful submission
       }
     })
