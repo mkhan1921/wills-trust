@@ -55,6 +55,7 @@ function submit(e: SubmitEvent) {
     .then((response) => response.json())
     .then((data) => {
       if (data.success === "false") {
+        console.error(data);
         throw new Error("An error has occurred.");
       } else {
         console.log(data);
@@ -77,14 +78,14 @@ function submit(e: SubmitEvent) {
 function showSnackbar(message: string, state?: string) {
   snackbar.classList.add(
     "flex",
-    "animate-fade-in-out",
+    "animate-fade-in",
     state == "error" ? "bg-red-600" : "bg-green-600"
   );
   snackbar.classList.remove("hidden");
   snackbar.innerText = message;
   // After 3 seconds, remove the animation and hide the snackbar
   setTimeout(function () {
-    snackbar.classList.remove("flex", "animate-fade-in-out");
+    snackbar.classList.remove("flex", "animate-fade-in");
     snackbar.classList.add("hidden");
   }, 3000);
 }
