@@ -1,8 +1,8 @@
-import { defineConfig } from 'vite'
+import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: '/wills-trust/',
+  base: "./",
   build: {
-    outDir: 'dist', // Default output folder
+    outDir: "dist", // Default output folder
   },
-})
+});
